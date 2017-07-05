@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet"  href="css/jquery-tabSelect.css">
+	<title></title>
+	<style>
+		#box{
+			width: 200px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+		<div id="box"></div>
+	</div>
+	
+	<script src="./jquery-3.1.0.min.js"></script> 
+	<script src="./jquery-tabSelect.js"></script> 
+	<script>
+	new Tab({
+		target:$("#box"),  // 外部容器  * 必须配置*
+		textArr :["选项1","选项2","选项3"], // 每个选项卡的字 *必须配置的*
+		tabNum:3,  // 有多少个tab选项卡
+		tabWidth:120,// tab选项卡的宽度
+		tabHeight:40,// 选项卡的高度 
+		sliderColor:"#eee", // 滑动条的颜色
+		selectIndex: 5,   // 选中的第几个
+		selectColor:"#ccc", // 选中的颜色 默认红色
+		unSelectColor:"blue", // 未选中的颜色  默认和选中颜色一致
+		textColor:"red"// 字体颜色 默认白色
+	},function(index){
+		console.log(index);  //点击后的回调 返回值为当前点击的index值
+	});
+	
+	</script>
+</body>
+</html>
