@@ -82,7 +82,7 @@
     </tr>
 </tbody>
 </table>
-```js
+```
 new Tab({
     target:$("#box"),
     textArr :["选项1","选项2","选项3"],
@@ -97,6 +97,4 @@ new Tab({
 },function(index){
     console.log(index); //点击后的回调 返回值为当前点击的index值
 });
-
-
 ```
