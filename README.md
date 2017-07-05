@@ -82,7 +82,8 @@
     </tr>
 </tbody>
 </table>
-```
+
+```js
 new Tab({
     target:$("#box"),
     textArr :["选项1","选项2","选项3"],
