@@ -25,9 +25,9 @@ _proto.init = function () {
     this.lineHeight = this.tabList.get(0).offsetHeight;
     for (var i = 0; i < this.tabNum + 1; i++) {
         if (i === this.tabNum) {
-            this.tabList.append("<li class = 'slider'></li>");
+            this.tabList.append("<li class = 'slider tabSelectItem'></li>");
         } else {
-            this.tabList.append("<li class = 'tabItem'></li>");
+            this.tabList.append("<li class = 'tabItem tabSelectItem'></li>");
             this.tabList.find(".tabItem").eq(i).html(this.textArr[i]);
         }
     }
@@ -57,7 +57,7 @@ _proto.init = function () {
 
 _proto.clickTab = function (selectIndex, selectColor, unSelectColor, callback) {
     var self = this;
-    this.tabList.on('click', ".tabItem", function (e) {
+    this.target.on('click', ".tabList .tabItem", function (e) {
         var whatTab = $(this).index();
         if (selectIndex >= 0) {
             $(this).css({
